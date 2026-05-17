@@ -364,8 +364,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const totalDiscountAmt = giaXe * totalDiscountPercent;
 
         // 2. Tính toán Phí lăn bánh
-        let tyLeTruocBa = (region === 'HN') ? 0.12 : 0.10;
-        let phiTruocBa = giaXe * tyLeTruocBa; // Tạm tính theo xe xăng, nếu là xe điện có thể = 0 tùy chính sách
+        let tyLeTruocBa = 0;
+        let phiTruocBa = 0; // Xe điện VinFast được miễn 100% lệ phí trước bạ
         
         let phiBienSo = (region === 'HN' || region === 'HCM') ? 20000000 : 1000000;
         let phiKiemDinh = 340000;
@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ...discountRows,
             ['TỔNG ƯU ĐÃI (2)', `-${formatVND(totalDiscountAmt)}`, 'discount-row'],
             ['Nơi đăng ký trước bạ', regionText],
-            [`Phí trước bạ (${tyLeTruocBa*100}%)`, formatVND(phiTruocBa)],
+            [`Phí trước bạ (0% - Miễn phí cho xe điện)`, formatVND(phiTruocBa)],
             ['Lệ phí đăng ký (Biển số)', formatVND(phiBienSo)],
             ['Lệ phí kiểm định', formatVND(phiKiemDinh)],
             ['Lệ phí sử dụng đường bộ/năm', formatVND(phiDuongBo)],
