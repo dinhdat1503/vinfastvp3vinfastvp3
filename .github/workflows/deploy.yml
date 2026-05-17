@@ -18,3 +18,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
           server-dir: /domains/vinhphucvinfast.com.vn/wp-content/themes/flatsome/
+          force-upload: true
