@@ -388,7 +388,8 @@ document.addEventListener('DOMContentLoaded', function() {
             ['Lệ phí sử dụng đường bộ/năm', formatVND(phiDuongBo)],
             ['Bảo hiểm TNDS bắt buộc/năm', formatVND(phiTNDS)],
             ['Bảo hiểm vật chất xe (tạm tính 1.5%)', formatVND(phiVatChat)],
-            ['Tổng chi phí đăng ký (3)', formatVND(tongPhi)]
+            ['Tổng chi phí đăng ký (3)', formatVND(tongPhi)],
+            ['TỔNG CHI PHÍ LĂN BÁNH (1 - 2 + 3)', formatVND(tongCong), 'total-row']
         ];
 
         let html = '';
